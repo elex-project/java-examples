@@ -1,2 +1,2 @@
 rootProject.name = "java-examples"
-include("lib", "app")
+include("java-web-token", "mockito")

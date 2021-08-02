@@ -29,12 +29,11 @@ configurations {
 }
 
 tasks.jar {
-	manifest { // todo
+	manifest {
 		attributes(mapOf(
 			"Implementation-Title" to project.name,
 			"Implementation-Version" to project.version,
-			"Implementation-Vendor" to "ELEX co.,pte.",
-			"Automatic-Module-Name" to "com.elex_project.${project.name}"
+			"Implementation-Vendor" to "ELEX co.,pte."
 		))
 	}
 }
@@ -61,7 +60,7 @@ tasks.javadoc {
 
 }
 dependencies {
-	implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+	//implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 	implementation("org.slf4j:slf4j-api:1.7.30")
 	implementation("org.jetbrains:annotations:21.0.1")
 
