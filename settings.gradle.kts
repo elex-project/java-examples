@@ -1,3 +1,13 @@
+/*
+ * Examples for Java
+ *
+ * Copyright (c) 2021. Elex. All Rights Reserved.
+ * https://www.elex-project.com/
+ */
+
 rootProject.name = "java-examples"
-include("java-web-token", "mockito",
-"mosquitto", "rabbit-mq", "ssh", "web-socket")
+include("json-web-token", "mockito",
+"mosquitto", "rabbit-mq",
+    "ssh",
+    "web-socket-servlet","web-socket-client",
+    "thread")

@@ -1,3 +1,10 @@
+/*
+ * Examples for Java
+ *
+ * Copyright (c) 2021. Elex. All Rights Reserved.
+ * https://www.elex-project.com/
+ */
+
 plugins {
 	java
 }
@@ -61,14 +68,16 @@ tasks.javadoc {
 }
 dependencies {
 	//implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-	implementation("org.slf4j:slf4j-api:1.7.30")
+	implementation("org.slf4j:slf4j-api:1.7.32")
 	implementation("org.jetbrains:annotations:21.0.1")
+
+	implementation("com.elex-project:abraxas:4.5.3")
 
 	compileOnly("org.projectlombok:lombok:1.18.20")
 	annotationProcessor("org.projectlombok:lombok:1.18.20")
 	testAnnotationProcessor("org.projectlombok:lombok:1.18.20")
 
 	testImplementation("ch.qos.logback:logback-classic:1.2.3")
-	testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
-	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+	testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
 }
