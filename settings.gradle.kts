@@ -10,4 +10,4 @@ include("json-web-token", "mockito",
 "mosquitto", "rabbit-mq",
     "ssh",
     "web-socket-servlet","web-socket-client",
-    "thread")
+    "thread", "hibernate")
