@@ -77,7 +77,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok:1.18.20")
 	testAnnotationProcessor("org.projectlombok:lombok:1.18.20")
 
-	testImplementation("ch.qos.logback:logback-classic:1.2.3")
+	implementation("ch.qos.logback:logback-classic:1.2.3")
 	testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
 }

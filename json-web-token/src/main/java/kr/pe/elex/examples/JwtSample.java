@@ -11,16 +11,19 @@ import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.InvalidKeyException;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Random;
 
+@Slf4j
 public class JwtSample {
 	private static final byte[] key;
 
 	static {
+		// HMACSHA256을 사용하므로 키의 길이는 32바이트이다.
 		key = new byte[32];
 		new Random().nextBytes(key);
 	}
@@ -35,16 +38,35 @@ public class JwtSample {
 				.compact();
 	}
 
+	/**
+	 *
+	 * @param token 토큰
+	 * @return
+	 * @throws UnsupportedJwtException
+	 * @throws MalformedJwtException
+	 * @throws SignatureException
+	 * @throws ExpiredJwtException
+	 * @throws MissingClaimException
+	 * @throws IncorrectClaimException
+	 */
 	public static Jws<Claims> parseToken(final String token)
-			throws UnsupportedJwtException, MalformedJwtException, SignatureException, ExpiredJwtException {
+			throws UnsupportedJwtException, MalformedJwtException, SignatureException, ExpiredJwtException,
+			MissingClaimException, IncorrectClaimException {
 
 		return Jwts.parserBuilder()
 				.setSigningKey(key)
+				.requireIssuer("Elex") // 토큰의 Issuer 일치 여부 확인
 				.build()
 				.parseClaimsJws(parseHeader(token));
 	}
 
-	private static String parseHeader(final String authenticationHeader) {
+	/**
+	 * Http 헤더에서 토큰 부분만 추출
+	 * @param authenticationHeader http header
+	 * @return 토큰 부분만 반환
+	 */
+	private static String parseHeader(final String authenticationHeader)
+			throws MalformedJwtException {
 		final String[] authentication = authenticationHeader.split(" ");
 		if (authentication.length == 2 && authentication[0].matches("[bB]earer")) {
 			return authentication[1];
@@ -56,11 +78,13 @@ public class JwtSample {
 	}
 
 	public static void main(String... args) {
-		String token = generateToken();
+		final String token = generateToken();
 		System.out.println(token);
 
-		String authHeader = "Bearer " + token;
+		final String authHeader = "Bearer " + token;
 		Jws<Claims> claims = parseToken(authHeader);
 		System.out.println(claims);
+		final int userId = claims.getBody().get("userId", Integer.class);
+		System.out.println("User Id: " + userId);
 	}
 }

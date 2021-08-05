@@ -13,6 +13,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -27,11 +28,11 @@ public class Sample {
 		executor.scheduleAtFixedRate(new Runnable() {
 			                             @Override
 			                             public void run() {
-
+											System.out.println("Hi~");
 			                             }
 		                             },
-				Duration.between(LocalDateTime.now(), startTime).abs().get(ChronoUnit.MILLIS),
-				Period.ofDays(1).get(ChronoUnit.MILLIS),
+				Duration.between(LocalDateTime.now(), startTime).abs().toMillis(),
+				Duration.ofDays(1).toMillis(),
 				TimeUnit.MILLISECONDS);
 
 	}

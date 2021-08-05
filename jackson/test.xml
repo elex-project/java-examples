@@ -1,0 +1,5 @@
+<Person>
+  <name>Charlie</name>
+  <age>11</age>
+  <male>true</male>
+</Person>

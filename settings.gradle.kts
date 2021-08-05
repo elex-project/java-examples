@@ -6,8 +6,11 @@
  */
 
 rootProject.name = "java-examples"
-include("json-web-token", "mockito",
-"mosquitto", "rabbit-mq",
+include(
+    "json-web-token", "mockito",
+    "mosquitto", "rabbit-mq",
     "ssh",
-    "web-socket-servlet","web-socket-client",
-    "thread", "hibernate")
+    "web-socket-servlet", "web-socket-client",
+    "thread", "hibernate", "jdbc-sqlite",
+    "xml", "jackson", "jsoup"
+)
