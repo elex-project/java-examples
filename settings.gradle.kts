@@ -12,5 +12,5 @@ include(
     "ssh",
     "web-socket-servlet", "web-socket-client",
     "thread", "hibernate", "jdbc-sqlite",
-    "xml", "jackson", "jsoup"
+    "xml", "jackson", "jsoup", "markdown"
 )
