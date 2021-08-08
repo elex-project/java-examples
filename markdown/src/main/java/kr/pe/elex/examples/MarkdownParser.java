@@ -72,9 +72,7 @@ public class MarkdownParser {
 		PARSER = Parser.builder(options).build();
 		RENDERER = HtmlRenderer.builder(options).build();
 
-		YAML_VISITOR = new AbstractYamlFrontMatterVisitor() {
-
-		};
+		YAML_VISITOR = new AbstractYamlFrontMatterVisitor();
 	}
 
 	public MarkdownParser(final String md) {
