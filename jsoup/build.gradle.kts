@@ -11,5 +11,5 @@ plugins {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.jsoup/jsoup
-    implementation( "org.jsoup:jsoup:1.13.1")
+    implementation("org.jsoup:jsoup:1.14.1")
 }
