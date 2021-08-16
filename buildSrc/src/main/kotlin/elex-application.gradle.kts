@@ -7,7 +7,7 @@
 
 
 plugins {
-	id("elex-base")
+	id("elex-java")
 	application
 }
 

@@ -69,9 +69,9 @@ tasks.javadoc {
 dependencies {
 	//implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 	implementation("org.slf4j:slf4j-api:1.7.32")
-	implementation("org.jetbrains:annotations:21.0.1")
+	implementation("org.jetbrains:annotations:22.0.0")
 
-	implementation("com.elex-project:abraxas:4.5.3")
+	implementation("com.elex-project:abraxas:4.6.0")
 
 	compileOnly("org.projectlombok:lombok:1.18.20")
 	annotationProcessor("org.projectlombok:lombok:1.18.20")

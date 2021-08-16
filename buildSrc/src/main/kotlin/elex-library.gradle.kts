@@ -6,7 +6,7 @@
  */
 
 plugins {
-	id ("elex-base")
+	id ("elex-java")
 	`java-library`
 	`maven-publish`
 }

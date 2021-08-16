@@ -13,5 +13,5 @@ include(
     "web-socket-servlet", "web-socket-client",
     "thread", "hibernate", "jdbc-sqlite",
     "xml", "jackson", "jsoup", "markdown", "network", "httpd",
-    "swing", "java-fx"
+    "swing", "java-fx", "properties"
 )
