@@ -7,6 +7,8 @@
 </head>
 <body>
 <p><span th:text="#{hello}"></span><span th:text="${person.name}">NAME</span></p>
-<p th:text="#{only}"></p>
+<p><span th:text="#{only}">ONLY IN ROOT</span></p>
+<p>with Text: <span th:text="${html}"></span></p>
+<p>with UText: <span th:utext="${html}"></span></p>
 </body>
 </html>
