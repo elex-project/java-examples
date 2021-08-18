@@ -14,5 +14,5 @@ include(
     "thread", "hibernate", "jdbc-sqlite",
     "xml", "jackson", "jsoup", "markdown", "network", "httpd",
     "swing", "java-fx", "properties",
-    "mustache", "thymeleaf", "locale"
+    "mustache", "thymeleaf", "locale", "quartz"
 )
