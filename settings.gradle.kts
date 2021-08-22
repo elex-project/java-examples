@@ -9,11 +9,11 @@ rootProject.name = "java-examples"
 include(
     "json-web-token", "mockito",
     "mosquitto", "rabbit-mq",
-    "ssh",
+    "ssh", "batik", "webcam",
     "web-socket-servlet", "web-socket-client",
     "thread", "hibernate", "jdbc-sqlite",
     "xml", "jackson", "jsoup", "markdown", "network", "httpd",
-      "properties",
+    "properties",
     "mustache", "thymeleaf", "locale", "quartz", "sysinfo",
     "imaging"
 )
