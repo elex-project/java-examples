@@ -10,5 +10,7 @@ plugins {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-imaging
+    implementation("org.apache.commons:commons-imaging:1.0-alpha2")
 
 }

@@ -13,6 +13,7 @@ include(
     "web-socket-servlet", "web-socket-client",
     "thread", "hibernate", "jdbc-sqlite",
     "xml", "jackson", "jsoup", "markdown", "network", "httpd",
-    "swing", "java-fx", "properties",
-    "mustache", "thymeleaf", "locale", "quartz", "sysinfo"
+      "properties",
+    "mustache", "thymeleaf", "locale", "quartz", "sysinfo",
+    "imaging"
 )
