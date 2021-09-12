@@ -15,5 +15,5 @@ include(
     "xml", "jackson", "jsoup", "markdown", "network", "httpd",
     "properties", "serial-io",
     "mustache", "thymeleaf", "locale", "quartz", "sysinfo",
-    "imaging", "stream"
+    "imaging", "stream", "sound"
 )
