@@ -32,13 +32,13 @@ public class Playback {
 		line.open();
 		line.start();
 		line.addLineListener(event -> {
-			if (event.getType().equals(LineEvent.Type.OPEN)){
+			if (event.getType().equals(LineEvent.Type.OPEN)) {
 
 			} else if (event.getType().equals(LineEvent.Type.START)) {
 
-			}else if (event.getType().equals(LineEvent.Type.STOP)) {
+			} else if (event.getType().equals(LineEvent.Type.STOP)) {
 
-			}else if (event.getType().equals(LineEvent.Type.CLOSE)) {
+			} else if (event.getType().equals(LineEvent.Type.CLOSE)) {
 
 			}
 		});
